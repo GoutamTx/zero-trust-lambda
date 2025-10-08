@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: ✅ Checkout code
         uses: actions/checkout@v4
+        env:
+          # Add this line for the test
+          AWS_ACCESS_KEY_ID: "THIS_IS_A_FAKE_KEY"
 
       - name: 🛡️ Scan for static AWS secrets
         run: |
