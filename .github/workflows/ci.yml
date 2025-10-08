@@ -34,7 +34,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           # Replace YOUR_AWS_ACCOUNT_ID with your actual account ID
-          role-to-assume: arn:aws:iam::YOUR_AWS_ACCOUNT_ID:role/github-actions-deploy-role
+          role-to-assume: arn:aws:iam::577467805138:role/github-actions-deploy-role
           aws-region: us-east-1
 
       - name: 📦 Zip Lambda function
