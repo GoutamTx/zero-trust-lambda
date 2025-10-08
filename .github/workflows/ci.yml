@@ -24,7 +24,7 @@ jobs:
       - name: 🛡️ Scan for static AWS secrets
         run: |
           # This step fails the build if AWS keys are found in the workflow files
-          if grep -r "AWS_ACCESS_KEY_ID" .github/workflows/ || grep -r "AWS_SECRET_ACCESS_KEY" .github/workflows/; then
+          if grep -r "AWS_ACCESS_KEY""_ID" .github/workflows/ || grep -r "AWS_SECRET_ACCESS""_KEY" .github/workflows/; then
             echo "Error: Static AWS credentials found in workflow. Please use OIDC roles."
             exit 1
           fi
